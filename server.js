@@ -23,7 +23,7 @@ App.use('/api/orders', RoutesOrder)
 App.use('/api/users', RoutesUser)
 
 
-app.get("/*", function (req, res) {
+App.get("/*", function (req, res) {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
  })
 
