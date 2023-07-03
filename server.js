@@ -14,7 +14,9 @@ const PORT = process.env.PORT || 7011;
 App.use(cors())
 App.use(express.json())
 
-
+App.use("/",(req,res)=>{
+    res.send("Hello From Backend")
+})
 App.use('/api/products', RoutesProduct)
 App.use('/api/clients', RoutesClient)  // middleware routing
 App.use('/api/orders', RoutesOrder) 
